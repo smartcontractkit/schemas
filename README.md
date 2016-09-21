@@ -15,7 +15,7 @@ Once the assignment is recieved by the oracle, they sign off on the work as part
 See [core ruby](https://github.com/smartoracles/core-ruby) for a working implementation of an oracle which can have various adapters attached to it.
 
 ## Adapters
-The adapter protocol allows for anyone running a Nayru instance to specify what they need to work with a service. Adapters can have as much or as little logic as is needed. There are two parts for all adapters: input and output.
+The adapter protocol allows for anyone running a smart oracle instance to specify what they need to work with a service. Adapters can have as much or as little logic as is needed. There are two parts for all adapters: input and output.
 
 ### Input
 There are three ways to trigger input adapters: scheduled updates, on-chain requests, and off-chain requests. All adapters support scheduled requests, and can additionally support either on-chain OR off-chain requets. The need for both on-chain and off-chain input together can often be solved by feeding one adapter into another. All adapters can also provide preset information.
