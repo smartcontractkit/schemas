@@ -12,7 +12,7 @@ Once the assignment is recieved by the oracle, they sign off on the work as part
 
 ## Implementations
 
-See [nayru](https://github.com/smartoracles/nayru) for a working implementation of an oracle which can have various adapters attached to it.
+See [core ruby](https://github.com/smartoracles/core-ruby) for a working implementation of an oracle which can have various adapters attached to it.
 
 ## Adapters
 The adapter protocol allows for anyone running a Nayru instance to specify what they need to work with a service. Adapters can have as much or as little logic as is needed. There are two parts for all adapters: input and output.
