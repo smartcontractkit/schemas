@@ -16,7 +16,7 @@ Once the assignment is recieved by the oracle, if they accept the assignment the
 
 ## Implementations
 
-See [core ruby](https://github.com/smartoracles/core-ruby) for a working implementation of an oracle with various adapters attached to it.
+See [ChainLink](https://github.com/oraclekit/chainlink) for a working implementation of an oracle with various adapters attached to it.
 
 ## Adapters
 The adapter protocol allows for anyone running a smart oracle instance to specify what they need to provide a service/integration. Adapters can have as much or as little logic as is needed. There are two parts for all adapters: input and output.
