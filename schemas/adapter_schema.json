@@ -1,64 +1,20 @@
 {
   "definitions": {
-    "abi": {
-      "description": "describes Application Binary Interface in different languages",
-      "properties": {
-        "json": {
-          "description": "JSON ABI",
-          "items": { "type": "object" },
-          "type": "array"
-        },
-        "solidity": {
-          "description": "Solidity ABI",
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "applicationValidation": {
-      "description": "Marks if more validation is needed beyond the schema. Deafults to false.",
-      "type": "boolean"
-    },
     "input": {
-      "description": "describes input formats",
-      "properties": {
-        "offChain": { "$ref": "#/definitions/offChainInput" },
-        "onChain": { "$ref": "#/definitions/onChainInput" },
-        "preset": { "$ref": "#/definitions/presetInput" }
-      },
-      "type": "object"
-    },
-    "offChainInput": {
-      "description": "describes off-chain input methods",
-      "type": "object"
-    },
-    "offChainOutput": {
-      "description": "describes off-chain output",
-      "type": "object"
-    },
-    "onChainInput": {
-      "description": "describes on-chain input methods",
-      "type": "object"
-    },
-    "onChainOutput": {
-      "description": "describes on-chain output methods",
+      "description": "describes required input formatting",
       "type": "object"
     },
     "output": {
-      "description": "describes output formats",
-      "properties": {
-        "offChain": { "$ref": "#/definitions/offChainOutput" },
-        "onChain": { "$ref": "#/definitions/onChainOutput" }
-      },
+      "description": "describes output formatting",
       "type": "object"
     },
-    "presetInput": {
-      "description": "describes prerequisite inputs for the assignment",
+    "config": {
+      "description": "describes prerequisite data needed to set up the adapter",
       "type": "object"
     }
   },
   "properties": {
-    "abi": { "$ref": "#/definitions/abi" },
+    "config": { "$ref": "#/definitions/config" },
     "input": { "$ref": "#/definitions/input" },
     "output": { "$ref": "#/definitions/output" }
   },
