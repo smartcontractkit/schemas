@@ -3,21 +3,24 @@
         "properties": {
             "address": {
                 "description": "Ethereum address to watch for logs.",
-                "type" : "string"
+                "type": "string"
             },
-            "topics" : {
+            "topics": {
                 "description": "Event topics to watch for in logs.",
-                "type" : "string"
+                "type": "string"
             }
         },
-        "required": ["address", "topics"],
+        "required": [
+            "address",
+            "topics"
+        ],
         "type": "object"
     },
     "input": {
         "properties": {
             "_value": {
                 "description": "Input parameters are not used by this adapter.",
-                "type" : "string"
+                "type": "string"
             }
         },
         "required": [],
@@ -27,7 +30,7 @@
         "properties": {
             "address": {
                 "description": "Ethereum address where the log was generated.",
-                "type" : "string"
+                "type": "string"
             },
             "blockHash": {
                 "description": "Hash of the block which generated the log.",
@@ -47,7 +50,9 @@
             },
             "topics": {
                 "description": "List of topics that the log indicated as relevant.",
-                "type": { "type": "string" }
+                "type": {
+                    "type": "string"
+                }
             },
             "transactionHash": {
                 "description": "Identifier of the tranasaction which generated the log.",
@@ -62,7 +67,17 @@
                 "type": "string"
             }
         },
-        "required": ["address", "blockHash", "blockNumber", "data", "logIndex", "topics", "transactionHash", "transactionIndex", "value"],
+        "required": [
+            "address",
+            "blockHash",
+            "blockNumber",
+            "data",
+            "logIndex",
+            "topics",
+            "transactionHash",
+            "transactionIndex",
+            "value"
+        ],
         "type": "object"
-      }
+    }
 }

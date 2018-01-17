@@ -1,23 +1,29 @@
 {
-  "definitions": {
-    "input": {
-      "description": "describes required input formatting",
-      "type": "object"
+    "definitions": {
+        "input": {
+            "description": "describes required input formatting",
+            "type": "object"
+        },
+        "output": {
+            "description": "describes output formatting",
+            "type": "object"
+        },
+        "config": {
+            "description": "describes prerequisite data needed to set up the adapter",
+            "type": "object"
+        }
     },
-    "output": {
-      "description": "describes output formatting",
-      "type": "object"
+    "properties": {
+        "config": {
+            "$ref": "#/definitions/config"
+        },
+        "input": {
+            "$ref": "#/definitions/input"
+        },
+        "output": {
+            "$ref": "#/definitions/output"
+        }
     },
-    "config": {
-      "description": "describes prerequisite data needed to set up the adapter",
-      "type": "object"
-    }
-  },
-  "properties": {
-    "config": { "$ref": "#/definitions/config" },
-    "input": { "$ref": "#/definitions/input" },
-    "output": { "$ref": "#/definitions/output" }
-  },
-  "required": [],
-  "type": "object"
+    "required": [],
+    "type": "object"
 }

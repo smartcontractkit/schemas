@@ -4,10 +4,14 @@
             "fields": {
                 "description": "The key path to follow to get the value to compare with the base value.",
                 "type": "array",
-                "items": { "type": "string" }
+                "items": {
+                    "type": "string"
+                }
             }
         },
-        "required": ["fields"],
+        "required": [
+            "fields"
+        ],
         "type": "object"
     },
     "input": {
@@ -34,7 +38,10 @@
                 "type": "string"
             }
         },
-        "required": ["details", "value"],
+        "required": [
+            "details",
+            "value"
+        ],
         "type": "object"
     }
 }

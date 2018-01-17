@@ -12,14 +12,21 @@
             "fields": {
                 "description": "The key path to follow to get the value to compare with the base value.",
                 "type": "array",
-                "items": { "type": "string" }
+                "items": {
+                    "type": "string"
+                }
             },
             "value": {
                 "description": "The base value which is compared to they dynamic value. If possible the base value is coerced to the type of the dynamic value, if it is not possible the comparison is treated as false and an empty value is returned.",
                 "type": "string"
             }
         },
-        "required": ["comparison", "endpoint", "fields", "value"],
+        "required": [
+            "comparison",
+            "endpoint",
+            "fields",
+            "value"
+        ],
         "type": "object"
     },
     "input": {
@@ -39,7 +46,9 @@
                 "type": "string"
             }
         },
-        "required": ["value"],
+        "required": [
+            "value"
+        ],
         "type": "object"
     }
 }

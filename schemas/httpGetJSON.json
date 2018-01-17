@@ -4,7 +4,9 @@
             "fields": {
                 "description": "The key path to follow to get the value to compare with the base value.",
                 "type": "array",
-                "items": { "type": "string" }
+                "items": {
+                    "type": "string"
+                }
             },
             "url": {
                 "description": "The URL that the JSON is pulled from.",
@@ -30,7 +32,10 @@
                 "type": "string"
             }
         },
-        "required": ["fields", "url"],
+        "required": [
+            "fields",
+            "url"
+        ],
         "type": "object"
     },
     "input": {
@@ -50,7 +55,9 @@
                 "type": "string"
             }
         },
-        "required": ["value"],
+        "required": [
+            "value"
+        ],
         "type": "object"
     }
 }
