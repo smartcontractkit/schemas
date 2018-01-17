@@ -1,0 +1,48 @@
+{
+    "config": {
+        "properties": {
+            "address": {
+                "description": "Ethereum address to send the data to.",
+                "type" : "string"
+            },
+            "functionID" : {
+                "description": "Ethereum function ID to send the data to.",
+                "type" : "string"
+            },
+            "data": {
+                "description": "Hexadecimal value to be sent in. This value is used as a fallback if no input value is passed in from the adapter pipeline.",
+                "type": "string"
+            },
+            "amount": {
+                "description": "Amount of Ether to send to the contract along with the data.",
+                "type": "integer"
+            }
+        },
+        "required": ["address", "functionID"],
+        "type": "object"
+    },
+    "input": {
+        "properties": {
+            "value": {
+                "description": "Hexadecimal value that will be sent in to the Ethereum contract. Requires the value already be formatted as hex.",
+                "type" : "string"
+            }
+        },
+        "required": ["value"],
+        "type": "object"
+    },
+    "output": {
+        "properties": {
+            "value": {
+                "description": "The input value passed in as hexadecimal.",
+                "type" : "string"
+            },
+            "txid": {
+                "description": "ID of the transaction that was written into Ethereum to create the update.",
+                "type" : "string"
+            }
+        },
+        "required": ["value", "txid"],
+        "type": "object"
+      }
+}

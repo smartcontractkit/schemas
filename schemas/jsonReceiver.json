@@ -1,0 +1,40 @@
+{
+    "config": {
+        "properties": {
+            "fields": {
+                "description": "The key path to follow to get the value to compare with the base value.",
+                "type": "array",
+                "items": { "type": "string" }
+            }
+        },
+        "required": ["fields"],
+        "type": "object"
+    },
+    "input": {
+        "properties": {
+            "_value": {
+                "description": "Input parameters are not used by this adapter.",
+                "type": "string"
+            }
+        },
+        "required": [],
+        "type": "object"
+    },
+    "output": {
+        "properties": {
+            "details": {
+                "description": "The full JSON payload passed into the oracle API endpoint.",
+                "type": "object",
+                "additionalProperties": {
+                    "$ref": "#/config/properties/fields"
+                }
+            },
+            "value": {
+                "description": "The value parsed out of the JSON API.",
+                "type": "string"
+            }
+        },
+        "required": ["details", "value"],
+        "type": "object"
+    }
+}
