@@ -1,0 +1,63 @@
+{
+    "config": {
+        "properties": {
+            "fields": {
+                "description": "The key path to follow to get the value to compare with the base value.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "url": {
+                "description": "The URL that the JSON is pulled from.",
+                "type": "string"
+            },
+            "basicAuth": {
+                "description": "JSON Object containing username and password fields.",
+                "properties": {
+                    "username": {
+                        "description": "The username to use for authentication.",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "The password to use for authentication.",
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": []
+            },
+            "headers": {
+                "description": "Headers to be included in request.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "fields",
+            "url"
+        ],
+        "type": "object"
+    },
+    "input": {
+        "properties": {
+            "_value": {
+                "description": "Input parameters are not used by this adapter.",
+                "type": "string"
+            }
+        },
+        "required": [],
+        "type": "object"
+    },
+    "output": {
+        "properties": {
+            "value": {
+                "description": "The value parsed out of the JSON API.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "value"
+        ],
+        "type": "object"
+    }
+}

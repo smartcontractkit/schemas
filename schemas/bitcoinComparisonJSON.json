@@ -1,0 +1,54 @@
+{
+    "config": {
+        "properties": {
+            "comparison": {
+                "description": "The operation used to compare the base value to the dynamic value. Options: ===, <, >, or contains.",
+                "type": "string"
+            },
+            "endpoint": {
+                "description": "The URL that the JSON is pulled from.",
+                "type": "string"
+            },
+            "fields": {
+                "description": "The key path to follow to get the value to compare with the base value.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "value": {
+                "description": "The base value which is compared to they dynamic value. If possible the base value is coerced to the type of the dynamic value, if it is not possible the comparison is treated as false and an empty value is returned.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "comparison",
+            "endpoint",
+            "fields",
+            "value"
+        ],
+        "type": "object"
+    },
+    "input": {
+        "properties": {
+            "_value": {
+                "description": "Input parameters are not used by this adapter.",
+                "type": "string"
+            }
+        },
+        "required": [],
+        "type": "object"
+    },
+    "output": {
+        "properties": {
+            "value": {
+                "description": "The value parsed out of the JSON API.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "value"
+        ],
+        "type": "object"
+    }
+}

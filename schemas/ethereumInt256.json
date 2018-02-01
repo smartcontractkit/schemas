@@ -1,0 +1,49 @@
+{
+    "config": {
+        "properties": {
+            "address": {
+                "description": "Ethereum address to send the data to, if a contract to update already exists.",
+                "type": "string"
+            },
+            "functionID": {
+                "description": "Ethereum function ID to send the data to, if a contract to update already exists.",
+                "type": "string"
+            },
+            "resultMultiplier": {
+                "description": "Amount to multiply the value passed in by. Allows for decimal value to be increased so that their precision is accounted for by integers. Defaults to 1.",
+                "type": "integer"
+            }
+        },
+        "required": [],
+        "type": "object"
+    },
+    "input": {
+        "properties": {
+            "value": {
+                "description": "Multiplied by the resultMultiplier and converted to an integer, then formatted to be written into Ethereum int256 format.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "value"
+        ],
+        "type": "object"
+    },
+    "output": {
+        "properties": {
+            "value": {
+                "description": "The input value passed in mutliplied by the resultMultiplier and converted to an integer.",
+                "type": "integer"
+            },
+            "txid": {
+                "description": "ID of the transaction that was written into Ethereum to create the update.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "value",
+            "txid"
+        ],
+        "type": "object"
+    }
+}

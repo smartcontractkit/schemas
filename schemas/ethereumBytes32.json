@@ -1,0 +1,45 @@
+{
+    "config": {
+        "properties": {
+            "address": {
+                "description": "Ethereum address to send the data to, if a contract to update already exists.",
+                "type": "string"
+            },
+            "functionID": {
+                "description": "Ethereum function ID to send the data to, if a contract to update already exists.",
+                "type": "string"
+            }
+        },
+        "required": [],
+        "type": "object"
+    },
+    "input": {
+        "properties": {
+            "value": {
+                "description": "Converted to a string from which the first 32 bytes are pulled and formatted to be written into Ethereum bytes32 format.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "value"
+        ],
+        "type": "object"
+    },
+    "output": {
+        "properties": {
+            "value": {
+                "description": "The input value passed in, converted to string, and then pulled the first 32 bytes.",
+                "type": "string"
+            },
+            "txid": {
+                "description": "ID of the transaction that was written into Ethereum to create the update.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "value",
+            "txid"
+        ],
+        "type": "object"
+    }
+}
