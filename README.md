@@ -1,4 +1,4 @@
-# Smart Oracles Specification
+# ChainLink Adapter Specification
 
 A specification for oracles to programatically describe the services they offer. In addition to describing the services available, this spec can be used by a consumer of oracle services to request work from an oracle provider.
 
@@ -10,7 +10,7 @@ Once an assignment is recieved by an oracle, the oracle signs the hash of the as
 
 Assignments are the core of the system, they are composed of one or more sequential Subtasks, a schedule, a fee specification, and optional name and description. Subtasks are the bulk of the Assignment, as they are work specifications for distinct job types. An oracle delegates each of its Subtasks to one of its Adapters which is specialized to handle such a Subtask.
 
-Adapters are services an oracle runs to expand the functionality they offer. An Adapter's Subtask requirements are specified by the oracle using the [adapter schema](https://github.com/smartoracles/spec/blob/master/schemas/adapter_schema.json). Subtasks can encapsulate as much work as necessary, but they tend to be more flexible and reusable when common jobs are broken out into small Adapters. By following the Adapter specification and protocol, anyone running an oracle provider can clearly specify their offered services and requirements. Adapters can have as much or as little logic as is needed. There are two parts for all adapters: input and output.
+Adapters are services an oracle runs to expand the functionality they offer. An Adapter's Subtask requirements are specified by the oracle using the [adapter schema](https://github.com/smartcontractkit/schemas/blob/master/schemas/adapter_schema.json). Subtasks can encapsulate as much work as necessary, but they tend to be more flexible and reusable when common jobs are broken out into small Adapters. By following the Adapter specification and protocol, anyone running an oracle provider can clearly specify their offered services and requirements. Adapters can have as much or as little logic as is needed. There are two parts for all adapters: input and output.
 
 ### Input
 
